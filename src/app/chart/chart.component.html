@@ -1,0 +1,13 @@
+<h3>Progress</h3>
+<div>
+    <div style="display: block">
+      <canvas baseChart height="150"
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              [chartType]="barChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+    </div>
+  </div> 
