@@ -6,8 +6,6 @@ import {DataSource} from '@angular/cdk/collections';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import {Observable} from 'rxjs/Observable';
 
-import 'rxjs/add/operator/map';
-
 import {GitIssue} from './../git-issue';
 import {GitIssueTimeStats} from './../git-issue-time-stats';
 import {DataLoaderService} from './../data-loader.service';
@@ -32,19 +30,10 @@ export class MyTableOnlineNewComponent implements OnInit {
 
     this.exampleDatabase = new DataLoaderService(http);
     this.dataSource = new ExampleDataSource(this.exampleDatabase);
-
-
   }
 
   ngOnInit() {
-    //
-    this.http.get('ENTER_HERE', {
-      headers: new HttpHeaders().set('PRIVATE-TOKEN', 'ENTER_HERE')
-        }).subscribe((data: Array<any>) => {
-        // Read the result field from the JSON response.
-        for (let i = 0; i < data.length; i++) { this.resultList[i] = data[i]; }
-        console.log('MyTable ngOnInit called ' + JSON.stringify(this.resultList));
-    });
+
   }
 }
 

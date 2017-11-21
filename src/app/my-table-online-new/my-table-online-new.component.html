@@ -29,7 +29,7 @@
       <!-- Estimate Column -->
       <ng-container matColumnDef="time_estimate">
         <mat-header-cell *matHeaderCellDef> Estimate (PT) </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.time_estimate}} </mat-cell>
+        <mat-cell *matCellDef="let row"> {{row.time_stats.time_estimate / 60 / 60}} </mat-cell>
       </ng-container>
   
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
