@@ -15,9 +15,9 @@ export class DataLoaderService {
     console.log('EXAMPLEHTTPDATABASE constructor called ');
   }
 
-  private _server = '';
-  private _project = '';
-  private _privateToken = '';
+  private _server = 'gitlab.ergosign-projects.com';
+  private _project = 'stoeber%2Fglobal-configurator';
+  private _privateToken = 'sTz-_ubt_n-fMGv95xxn';
 
   private issuesUrl = 'https://' + this._server + '/api/v4/projects/' + this._project + '/issues';  // URL to web API
 
@@ -39,7 +39,6 @@ export class DataLoaderService {
           iid: issue.iid,
           state: issue.state,
           title: issue.title,
-          // calculating seconds to hours
           time_stats: issue.time_stats
         };
       });

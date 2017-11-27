@@ -25,6 +25,7 @@ import { ChartsModule } from 'ng2-charts';
 import { StartComponent } from './start/start.component';
 import { ConfigMenuComponent } from './config-menu/config-menu.component';
 import { MyTableOnlineNewComponent } from './my-table-online-new/my-table-online-new.component';
+import { ConfigService } from './config.service';
 
 
 
@@ -52,7 +53,9 @@ import { MyTableOnlineNewComponent } from './my-table-online-new/my-table-online
     MatInputModule,
     ChartsModule
   ],
-  providers: [],
+  providers: [
+    ConfigService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 import {MatTabsModule} from '@angular/material/tabs';
+import { ConfigService } from '../config.service';
 
 @Component({
   selector: 'app-start',
@@ -10,9 +11,12 @@ import {MatTabsModule} from '@angular/material/tabs';
 })
 export class StartComponent implements OnInit {
 
-  constructor() { }
+  constructor(public configservice: ConfigService) { }
 
   ngOnInit() {
+
+    this.configservice.loadConfig();
+    console.log('Start component ngOnInit called ');
   }
 
 }
